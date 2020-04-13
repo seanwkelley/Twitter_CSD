@@ -76,14 +76,6 @@ FYP_df_subset <- FYP_df[which(FYP_df$Id %!in% remove_ids),]
 FYP_df_subset$Depressed_today <- as.factor(FYP_df_subset$Depressed_today)
 FYP_df_subset <- FYP_df_subset %>% filter(Date != '')
 
-var = 'negemo'
-
-parts <- list()
-#for(handle in unique(FYP_df_subset$Id)) {
-#df <- FYP_df_subset %>% filter(Id == handle)
-#df[,which(colnames(df) == var)] <- df[,which(colnames(df) == var)] * (df$WC/max(df$WC))
-#parts <- rbind(parts,df)
-#}
 
 ######################################################################################
 #Participants are included if they have at least 1 depressive with the following characteristics:
@@ -101,7 +93,6 @@ for(i in 1:length(episode$Id)) {
 #participants with 
 #list_names <- unique(episode$Id[which((episode$Critical_Transition >= (30*0.8)) & (episode$Depressive_Episode >= 10) & (episode$Between_Episodes >= 44))])
 #list_names <- unique(episode$Id[which((episode$Critical_Transition >= (30*0.8)) & (episode$Depressive_Episode >= 10))])
-list_names <- unique(episode$Id[which((episode$Depressive_Episode >= 10))])
 
 episode2 <- episode[which(episode$Id %in% list_names),]
 
