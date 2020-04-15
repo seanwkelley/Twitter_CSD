@@ -216,5 +216,4 @@ Participant_info['tweet'] = pd.DataFrame(tweet_num)
 #use times from all tweets to derive the following results
 #insomnia index 
 
-#Participant_info.to_csv('Participant_Data/FYP_Twitter_Participants_23.03_v2.csv',index = False)
-Participant_info.to_csv('Participant_Data/10.04.2020/FYP_Twitter_V3_US_10.04_v2.csv',index = False)
+Participant_info.to_csv('Participant_Data/FYP_Twitter_Participants_23.03_v2.csv',index = False)

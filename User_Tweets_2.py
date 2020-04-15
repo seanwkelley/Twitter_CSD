@@ -213,4 +213,4 @@ def get_all_tweets(screen_name):
 	
 if __name__ == '__main__':
 	#pass in the username of the account you wantto download
-	get_all_tweets("Wings_200")
+	get_all_tweets("famouslastiero")
